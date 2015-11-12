@@ -1,0 +1,26 @@
+a)echo   
+echo is used to output a line of text that the user types after typing the word echo
+
+b)echo {con,pre}{sent,fer}{s,ed}
+this outputs a line of words with all combinations using one set of letters in each bracet.
+this does not output any duplicates and uses one set of letters from each bracet in the order of the bacet alignment.
+
+c)date 
+outputs the current day, month, time, and year
+
+d)whoami
+this outputs the user ID on the computer.
+
+e)cal 2000
+outputs a calender for the year 2000
+
+f)cal 9 1752
+outputs a calender of september for the year of 1752 however, it skips days 3-13
+   
+g)bc -l
+this outputs information about the computer and the software we are using however, when put after an equation it will calculate th math
+
+h)echo 5+4 | bc -l
+this calculates what 5+4 and outputs the answer
+
+
