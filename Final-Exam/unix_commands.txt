@@ -4,6 +4,17 @@
 # except the two header lines?
 # Enter the relevant Unix command(s) used below.
 
+#!/bin/bash
+filename = classlist.csv
+read filename #just in case
+m = 2
+newfilename = classlistnew.csv
+
+read m #i just want to make sure the program obtains the value m
+head -n -"$m" "$filename" > "$newfilename"  #so this will take away the first two lines
+# this will also make a new file without the two lines which i will then display
+
+echo "$classlistnew.csv"
 
 
 
@@ -13,7 +24,10 @@
 # Enter the relevant Unix command(s) used below as well as the number
 # of students in the list.
 
+#i would creat a file called lengths.txt so i may input the number of students in the the file from part a
 
+wc - l "$classlistnew.csv" > "$lengths.txt"
+#using word count i count the lines in the new file from part a that contains all the students then i put the number of students into the file lengths.txt.
 
 
 # part (c)
@@ -24,8 +38,11 @@
 # Enter the relevant Unix command(s) used below as well as the names
 # of the first and last students in the new list.
 
-
-
+#so i woul need to sort with respect to the second column
+cat classlistnew.csv | sort -a -k1 classlistnew.csv
+#so i need to use -a so it can organize the list alphabetically
+#i need -k1 because unix starts counting from 0 and we need to organixe from colomn 2 
+# the result that should be produced would be adam holte and trish saeed
 
 # part (d)
 # Construct a Unix pipeline involving these functions to determine
